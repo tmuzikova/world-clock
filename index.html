@@ -4,44 +4,73 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+
     <title>World Clock</title>
   </head>
   <body>
     <div class="container">
       <h1>World Clock</h1>
-      <select id="">
-        <option value="">Select a city...</option>
-        <option value="">London</option>
-        <option value="">Prague</option>
-        <option value="">New York</option>
-        <option value="">Vancouver</option>
-      </select>
-
-      <div class="city">
-        <h2>Singapore</h2>
-        <div class="date">April 16th 2024</div>
-        <div class="time">10:56 AM</div>
-      </div>
-      <div class="city">
-        <h2>Toronto</h2>
-        <div class="date">April 16th 2024</div>
-        <div class="time">10:56 AM</div>
-      </div>
-      <div class="city">
-        <h2>Copenhagen</h2>
-        <div class="date">April 16th 2024</div>
-        <div class="time">10:56 AM</div>
-      </div>
-      <div class="city">
-        <h2>Melbourne</h2>
-        <div class="date">April 16th 2024</div>
-        <div class="time">10:56 AM</div>
+      <div class="select-container">
+        <select id="select-element" class="select-element">
+          <option value="">Select a city...</option>
+          <option value="">London</option>
+          <option value="">Prague</option>
+          <option value="">New York</option>
+          <option value="">Vancouver</option>
+        </select>
       </div>
 
-      <footer>
-        This project was coded by <a href="">Tereza Muzikova</a> is on
-        <a href="">GitHub</a> and hosted on <a href="">Netlify</a>.
-      </footer>
+      <div class="darker-background">
+        <div class="city">
+          <div class="city-and-date">
+            <h2>Singapore</h2>
+            <div class="date">April 16th 2024</div>
+          </div>
+
+          <div class="time">10:56 AM</div>
+        </div>
+
+        <div class="city">
+          <div class="city-and-date">
+            <h2>Toronto</h2>
+            <div class="date">April 16th 2024</div>
+          </div>
+          <div class="time">10:56 AM</div>
+        </div>
+
+        <div class="city">
+          <div class="city-and-date">
+            <h2>Copenhagen</h2>
+            <div class="date">April 16th 2024</div>
+          </div>
+          <div class="time">10:56 AM</div>
+        </div>
+
+        <div class="city">
+          <div class="city-and-date">
+            <h2>Melbourne</h2>
+            <div class="date">April 16th 2024</div>
+          </div>
+          <div class="time">10:56 AM</div>
+        </div>
+
+        <footer>
+          This project was coded by <a href="">Tereza Muzikova</a> is on
+          <a href="">GitHub</a> and hosted on <a href="">Netlify</a>.
+        </footer>
+      </div>
     </div>
     <script src="script.js"></script>
   </body>
