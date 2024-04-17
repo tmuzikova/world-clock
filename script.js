@@ -1,25 +1,42 @@
-setInterval(function () {
-  //Singapore
-  let singaporeElement = document.querySelector("#singapore");
-  let singaporeDateElement = singaporeElement.querySelector(".date");
-  let singaporeTimeElement = singaporeElement.querySelector(".time");
-  let singaporeTime = moment()
-    .tz("Asia/Singapore")
+function updateTime() {
+  //prague
+  let pragueElement = document.querySelector("#prague");
+  if (pragueElement) {
+    let pragueDateElement = pragueElement.querySelector(".date");
+    let pragueTimeElement = pragueElement.querySelector(".time");
+    let pragueTime = moment()
+      .tz("Europe/Prague")
+      .format("HH:mm:ss [<small>]A[</small>]");
+
+    pragueDateElement.innerHTML = moment().format("LL");
+    pragueTimeElement.innerHTML = pragueTime;
+  }
+}
+
+function updateCity(event) {
+  let cityTimezone = event.target.value;
+  if (cityTimezone === "current") {
+    cityTimezone = moment.tz.guess();
+  }
+  let cityName = cityTimezone.split("/")[1];
+  let cityTime = moment()
+    .tz(`${cityTimezone}`)
     .format("HH:mm:ss [<small>]A[</small>]");
+  let cityDate = moment().tz(`${cityTimezone}`).format("LL");
+  let citiesElement = document.querySelector("#cities");
 
-  singaporeDateElement.innerHTML = moment().format("LL");
-  singaporeTimeElement.innerHTML = singaporeTime;
-}, 1000);
+  citiesElement.innerHTML = `<div class="city">
+            <div class="city-and-date">
+              <h2>${cityName}</h2>
+              <div class="date">${cityDate}</div>
+            </div>
+            <div class="time">${cityTime}</div>
+          </div>
+        `;
+}
 
-setInterval(function () {
-  //Singapore
-  let torontoElement = document.querySelector("#toronto");
-  let torontoDateElement = torontoElement.querySelector(".date");
-  let torontoTimeElement = torontoElement.querySelector(".time");
-  let torontoTime = moment()
-    .tz("America/Toronto")
-    .format("HH:mm:ss [<small>]A[</small>]");
+let selectElement = document.querySelector("#select-element");
+selectElement.addEventListener("change", updateCity);
 
-  torontoDateElement.innerHTML = moment().format("LL");
-  torontoTimeElement.innerHTML = torontoTime;
-}, 1000);
+updateTime();
+setInterval(updateTime, 1000);
