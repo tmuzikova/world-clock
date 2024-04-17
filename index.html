@@ -16,6 +16,8 @@
       href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap"
       rel="stylesheet"
     />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.30.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.33/moment-timezone-with-data.min.js"></script>
 
     <title>World Clock</title>
   </head>
@@ -33,45 +35,45 @@
       </div>
 
       <div class="darker-background">
-        <div class="city">
+        <div class="city" id="singapore">
           <div class="city-and-date">
             <h2>Singapore</h2>
             <div class="date">April 16th 2024</div>
           </div>
-
-          <div class="time">10:56 AM</div>
+          <div class="time">10:56 <small>AM</small></div>
         </div>
 
-        <div class="city">
+        <div class="city" id="toronto">
           <div class="city-and-date">
             <h2>Toronto</h2>
             <div class="date">April 16th 2024</div>
           </div>
-          <div class="time">10:56 AM</div>
+          <div class="time">10:56 <small>AM</small></div>
         </div>
 
-        <div class="city">
+        <div class="city" id="copenhagen">
           <div class="city-and-date">
             <h2>Copenhagen</h2>
             <div class="date">April 16th 2024</div>
           </div>
-          <div class="time">10:56 AM</div>
+          <div class="time">10:56 <small>AM</small></div>
         </div>
 
-        <div class="city">
+        <div class="city" id="melbourne">
           <div class="city-and-date">
             <h2>Melbourne</h2>
             <div class="date">April 16th 2024</div>
           </div>
-          <div class="time">10:56 AM</div>
+          <div class="time">10:56 <small>AM</small></div>
         </div>
-
-        <footer>
-          This project was coded by <a href="">Tereza Muzikova</a> is on
-          <a href="">GitHub</a> and hosted on <a href="">Netlify</a>.
-        </footer>
       </div>
     </div>
+    <footer>
+      This project was coded by
+      <a href="https://github.com/tmuzikova">Tereza Muzikova</a> is on
+      <a href="https://github.com/tmuzikova/world-clock">GitHub</a> and hosted
+      on <a href="https://clock-worldwide.netlify.app/">Netlify</a>.
+    </footer>
     <script src="script.js"></script>
   </body>
 </html>

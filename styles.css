@@ -34,6 +34,7 @@
 
 .city-and-date {
   margin-left: 74px;
+  margin-bottom: 32px;
 }
 
 .time {
@@ -66,6 +67,10 @@ h2 {
   margin-bottom: 0;
 }
 
+small {
+  font-size: 24px;
+}
+
 a {
   color: #ff6d7f;
 }
@@ -74,6 +79,6 @@ footer {
   font-size: 12px;
   opacity: 0.7;
   margin-top: 24px;
-  padding-bottom: 16px;
+
   text-align: center;
 }
