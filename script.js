@@ -2,14 +2,26 @@ function updateTime() {
   //prague
   let pragueElement = document.querySelector("#prague");
   if (pragueElement) {
-    let pragueDateElement = pragueElement.querySelector(".date");
-    let pragueTimeElement = pragueElement.querySelector(".time");
+    let pragueDateElement = pragueElement.querySelector(".prague-date");
+    let pragueTimeElement = pragueElement.querySelector(".prague-time");
     let pragueTime = moment()
       .tz("Europe/Prague")
       .format("HH:mm:ss [<small>]A[</small>]");
 
     pragueDateElement.innerHTML = moment().format("LL");
     pragueTimeElement.innerHTML = pragueTime;
+  }
+  //denver
+  let denverElement = document.querySelector("#denver");
+  if (denverElement) {
+    let denverDateElement = denverElement.querySelector(".denver-date");
+    let denverTimeElement = denverElement.querySelector(".denver-time");
+    let denverTime = moment()
+      .tz("America/Denver")
+      .format("HH:mm:ss [<small>]A[</small>]");
+
+    denverDateElement.innerHTML = moment().format("LL");
+    denverTimeElement.innerHTML = denverTime;
   }
 }
 
@@ -19,6 +31,7 @@ function updateCity(event) {
     cityTimezone = moment.tz.guess();
   }
   let cityName = cityTimezone.split("/")[1];
+
   let cityTime = moment()
     .tz(`${cityTimezone}`)
     .format("HH:mm:ss [<small>]A[</small>]");
